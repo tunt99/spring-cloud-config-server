@@ -1,3 +1,6 @@
+server:
+  port: 8181
+
 twitter-to-kafka-service:
   twitter-keywords:
     - Java
@@ -13,6 +16,7 @@ twitter-to-kafka-service:
   mock-min-tweet-length: 5
   mock-max-tweet-length: 15
   mock-sleep-ms: 10000
+
 retry-config:
   initial-interval-ms: 1000
   max-interval-ms: 10000
