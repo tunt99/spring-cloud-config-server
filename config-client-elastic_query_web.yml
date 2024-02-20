@@ -19,5 +19,5 @@ spring:
 
 user-config:
   username: test
-  password: ENC(lTh4flB5tAt0R3SxY81ueAOlKAxN+oQA)
+  password: '{cipher}baeb90d57edb9a050b97b98a7d8cabe80ee884e6fff16c22956172459a43e54d'
   roles: USER
