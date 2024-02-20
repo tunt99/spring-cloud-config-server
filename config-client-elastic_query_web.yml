@@ -16,3 +16,8 @@ elastic-query-web-client:
 spring:
   thymeleaf:
     cache: false
+
+user-config:
+  username: test
+  password: ENC(lTh4flB5tAt0R3SxY81ueAOlKAxN+oQA)
+  roles: USER
