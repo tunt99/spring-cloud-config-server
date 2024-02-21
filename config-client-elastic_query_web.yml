@@ -19,5 +19,5 @@ spring:
 
 user-config:
   username: test
-  password: '{cipher}baeb90d57edb9a050b97b98a7d8cabe80ee884e6fff16c22956172459a43e54d'
+  password: '{bcrypt}$2a$10$S4xHhYB4GeG2dPJU4evo2Ofi/let0aJc27Zjy7PCGdS9OUCTtgn2a'
   roles: USER
