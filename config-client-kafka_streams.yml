@@ -14,15 +14,6 @@ server:
 #          issuer-uri: http://localhost:9990/realms/master
 #          jwk-set-uri: http://localhost:9990/realms/master/protocol/openid-connect/certs
 
-springdoc:
-  api-docs:
-    path: /api-docs
-  swagger-ui:
-    path: /swagger-ui.html
-
-security:
-  paths-to-ignore: /api-docs
-
 retry-config:
   initial-interval-ms: 1000
   max-interval-ms: 10000
