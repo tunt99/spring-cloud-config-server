@@ -1,0 +1,32 @@
+auth-service:
+  custom-audience: auth-service
+
+server:
+  port: 8989
+  servlet:
+    context-path: /auth-service
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9990/realms/master
+          jwk-set-uri: http://localhost:9990/realms/master/protocol/openid-connect/certs
+      client:
+        registration:
+          keycloak:
+            client-id: 'auth-service'
+            client-secret: b6VdS4EgV3uzdUDdhnsclAtzainRwhjl
+            authorization-grant-type: client_credentials
+        provider:
+          keycloak:
+            tokenUri: http://localhost:9990/realms/master/protocol/openid-connect/token
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+security:
+  paths-to-ignore: /api-docs
