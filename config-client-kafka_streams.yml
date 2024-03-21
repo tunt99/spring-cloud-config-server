@@ -6,13 +6,13 @@ server:
   servlet:
     context-path: /kafka-streams-service
 
-#spring:
-#  security:
-#    oauth2:
-#      resourceserver:
-#        jwt:
-#          issuer-uri: http://localhost:9990/realms/master
-#          jwk-set-uri: http://localhost:9990/realms/master/protocol/openid-connect/certs
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9990/realms/master
+          jwk-set-uri: http://localhost:9990/realms/master/protocol/openid-connect/certs
 
 retry-config:
   initial-interval-ms: 1000
