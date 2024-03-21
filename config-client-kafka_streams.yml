@@ -1,5 +1,6 @@
-kafka-streams-service:
-  custom-audience: kafka-streams-service
+auth:
+  data:
+    custom-audience: kafka-streams-service
 
 server:
   port: 8187

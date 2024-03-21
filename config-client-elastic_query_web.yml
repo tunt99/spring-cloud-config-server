@@ -3,8 +3,11 @@ server:
   servlet:
     context-path: /elastic-query-web-client
 
+auth:
+  data:
+    custom-audience: elastic-query-web-client
+
 elastic-query-web-client:
-  custom-audience: elastic-query-web-client
   webclient:
     connect-timeout-ms: 10000
     read-timeout-ms: 10000
@@ -46,6 +49,7 @@ spring:
 security:
   logout-success-url: http://localhost:8184/elastic-query-web-client
   default-client-registration-id: keycloak
+  paths-to-ignore: /api-docs
 
 user-config:
   username: test

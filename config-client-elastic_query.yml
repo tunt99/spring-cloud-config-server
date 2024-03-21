@@ -1,6 +1,9 @@
+auth:
+  data:
+    custom-audience: elastic-query-service
+
 elastic-query-service:
   version: v1
-  custom-audience: elastic-query-service
   backPressure-delay-ms: 500
   webclient:
     connect-timeout-ms: 10000

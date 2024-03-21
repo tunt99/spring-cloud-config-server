@@ -3,9 +3,12 @@ server:
   servlet:
     context-path: /analytics-service
 
-analytics-service:
-  version: v2
-  custom-audience: analytics-service
+auth:
+  data:
+    custom-audience: analytics-service
+
+security:
+  paths-to-ignore: /api-docs
 
 spring:
   security:
