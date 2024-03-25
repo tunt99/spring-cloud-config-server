@@ -19,7 +19,7 @@ elastic-query-service:
     accept: ${elastic-query-service.webclient.accept-type}
   query-from-analytics-database:
     method: GET
-    uri: "http://localhost:8187/analytics-service/get-word-count-by-word/{word}"
+    uri: "http://localhost:8188/analytics-service/get-word-count-by-word/{word}"
     accept: ${elastic-query-service.webclient.accept-type}
 
 server:
