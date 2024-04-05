@@ -11,6 +11,10 @@ security:
   paths-to-ignore: /api-docs
 
 spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
   security:
     oauth2:
       resourceserver:
