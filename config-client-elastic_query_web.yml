@@ -35,7 +35,7 @@ spring:
           keycloak:
             client-id: 'auth-service'
             client-secret: b6VdS4EgV3uzdUDdhnsclAtzainRwhjl
-            authorization-grant-type: authorization_code
+            authorization-grant-type: password
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
             scope: openid
         provider:
