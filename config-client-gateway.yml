@@ -25,7 +25,7 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: elastic-query-service
-          uri: http://elastic-query-service
+          uri: lb://localhost:8183
           predicates:
             - Path=/elastic-query-service/**
           filters:
@@ -40,7 +40,7 @@ spring:
                 name: queryServiceCircuitBreaker
                 fallbackUri: forward:/fallback/query-fallback
         - id: analytics-service
-          uri: http://analytics-service
+          uri: lb://analytics-service
           predicates:
             - Path=/analytics-service/**
           filters:
@@ -55,7 +55,7 @@ spring:
                 name: analyticsServiceCircuitBreaker
                 fallbackUri: forward:/fallback/analytics-fallback
         - id: kafka-streams-service
-          uri: http://kafka-streams-service
+          uri: lb://kafka-streams-service
           predicates:
             - Path=/kafka-streams-service/**
           filters:
