@@ -8,7 +8,19 @@ auth:
     custom-audience: analytics-service
 
 security:
-  paths-to-ignore: /api-docs
+  paths-to-ignore: /api-docs, /actuator/**
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure.include: health, prometheus
+      path-mapping.prometheus: metrics
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      cache.time-to-live: 1ms
 
 spring:
   cloud:
