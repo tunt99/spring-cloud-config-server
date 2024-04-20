@@ -24,11 +24,11 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lowerCaseServiceId: true
       routes:
         - id: elastic-query-service
-          uri: lb://desktop-k9ndmgm
+          uri: lb://elastic-query-service
           predicates:
             - Path=/elastic-query-service/**
           filters:
@@ -43,7 +43,7 @@ spring:
                 name: queryServiceCircuitBreaker
                 fallbackUri: forward:/fallback/query-fallback
         - id: analytics-service
-          uri: lb://elastic-query-service
+          uri: lb://analytics-service
           predicates:
             - Path=/analytics-service/**
           filters:
@@ -58,7 +58,7 @@ spring:
                 name: analyticsServiceCircuitBreaker
                 fallbackUri: forward:/fallback/analytics-fallback
         - id: kafka-streams-service
-          uri: lb://elastic-query-service
+          uri: lb://kafka-streams-service
           predicates:
             - Path=/kafka-streams-service/**
           filters:
